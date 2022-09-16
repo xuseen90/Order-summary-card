@@ -1,0 +1,157 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+/* css variable */
+:root {
+  --paleBlue: hsl(225, 100%, 94%);
+  --brightBlue: hsl(245, 75%, 52%);
+  --verypaleBlue: hsl(225, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --darkBlue: hsl(223, 47%, 23%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background: var(--paleBlue) url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.container {
+  margin-block: 1em;
+  width: 90%;
+  background-color: #fff;
+  max-width: 370px;
+  border-radius: 12px;
+  margin-top: 5%;
+}
+.left__container img {
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.right__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+.right__container h2 {
+  margin-bottom: 1rem;
+  color: var(--darkBlue);
+}
+.right__container p {
+  margin-bottom: 1rem;
+  color: var(--desaturatedBlue);
+  font-size: 1rem;
+  text-align: center;
+}
+.right__container .plan {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  margin-bottom: 1rem;
+  background-color: var(--verypaleBlue) ;
+  padding: 0.567rem;
+}
+.plan .img {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.plan h4 {
+  font-size: 15px;
+}
+.plan a {
+  color: var(--brightBlue);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.plan a:hover {
+  text-decoration: none;
+  color: var(--desaturatedBlue);
+}
+.btn {
+  /* margin-bottom: 1rem; */
+  width: 100%;
+}
+.btn button {
+  width: 100%;
+  background-color: var(--brightBlue);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  border: none;
+  padding: 20px;
+  border-radius: 12px;
+  color: var(--verypaleBlue);
+  font-size: 1.2rem;
+  box-shadow: 0 1rem 1rem rgba(56, 41, 224, 0.4);
+  cursor: pointer;
+}
+.btn button:hover {
+  background-color: var(--desaturatedBlue);
+}
+.btn p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn p:hover {
+  color: var(--darkBlue);
+}
+
+/* media queries */
+@media screen and (max-width: 768px) {
+  body {
+    background: var(--paleBlue) url(./images/pattern-background-mobile.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .container{
+    width: 80%;
+  }
+  .right__container h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .right__container p {
+    margin-bottom: 0.5rem;
+  }
+  .btn button {
+    margin-bottom: 0.1rem;
+    font-size: 12px;
+    padding: 13px 0;
+  }
+  .btn p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    width: 100%;
+  }
+  .right__container h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .right__container p {
+    margin-bottom: 0.5rem;
+  }
+  .btn button {
+    margin-bottom: 0.1rem;
+    font-size: 12px;
+    padding: 13px 0;
+  }
+  .btn p {
+    font-size: 1rem;
+  }
+}
